@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ethan Web Design | Premium Digital Experiences</title>
+    <link href="https://googleapis.com" rel="stylesheet">
+    <style>
+        :root {
+            --accent: #00ffcc; /* Neon Cyan */
+            --accent-glow: rgba(0, 255, 204, 0.3);
+            --bg: #050505;
+            --card-bg: #111111;
+            --text-main: #ffffff;
+            --text-dim: #a0a0a0;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Inter', sans-serif; scroll-behavior: smooth; }
+
+        body { 
+            background: var(--bg); 
+            background: radial-gradient(circle at top right, #0a1a1a, #050505);
+            color: var(--text-main); 
+            line-height: 1.6;
+        }
+
+        /* Header */
+        header { 
+            padding: 20px 5%; 
+            display: flex; 
+            justify-content: space-between; 
+            align-items: center;
+            background: rgba(10, 10, 10, 0.8);
+            backdrop-filter: blur(10px);
+            position: sticky; 
+            top: 0; 
+            z-index: 1000;
+            border-bottom: 1px solid rgba(255,255,255,0.05);
+        }
+
+        header h1 { font-size: 24px; letter-spacing: -1px; font-weight: 800; }
+        header h1 span { color: var(--accent); }
+
+        nav a { color: var(--text-dim); text-decoration: none; margin-left: 25px; font-size: 15px; transition: 0.3s; }
+        nav a:hover { color: var(--accent); }
+
+        /* Hero Section */
+        .hero { 
+            padding: 140px 20px; 
+            text-align: center; 
+            max-width: 900px; 
+            margin: 0 auto;
+        }
+
+        .hero h2 { 
+            font-size: clamp(40px, 8vw, 72px); 
+            line-height: 1.1; 
+            margin-bottom: 25px; 
+            background: linear-gradient(to bottom, #fff 40%, #777);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .hero p { font-size: 20px; color: var(--text-dim); margin-bottom: 40px; }
+
+        /* Premium Button */
+        .btn { 
+            display: inline-block; 
+            padding: 18px 45px; 
+            background: var(--accent); 
+            color: #000; 
+            font-size: 18px; 
+            text-decoration: none; 
+            border-radius: 50px; 
+            font-weight: 700; 
+            transition: 0.4s; 
+            box-shadow: 0 10px 30px var(--accent-glow);
+        }
+
+        .btn:hover { 
+            transform: translateY(-5px); 
+            box-shadow: 0 15px 40px var(--accent-glow);
+        }
+
+        /* Services */
+        section { padding: 100px 5%; text-align: center; }
+        h3 { font-size: 42px; margin-bottom: 50px; letter-spacing: -1px; }
+
+        .cards { 
+            display: grid; 
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
+            gap: 30px; 
+            max-width: 1200px; 
+            margin: 0 auto;
+        }
+
+        .card { 
+            background: var(--card-bg); 
+            padding: 40px; 
+            border-radius: 24px; 
+            border: 1px solid rgba(255,255,255,0.05);
+            transition: 0.3s;
+            text-align: left;
+        }
+
+        .card:hover { 
+            border-color: var(--accent);
+            background: rgba(255,255,255,0.02);
+        }
+
+        .card h4 { font-size: 24px; margin-bottom: 10px; }
+        .card p { color: var(--text-dim); margin-bottom: 25px; font-size: 16px; }
+
+        .price { font-size: 36px; color: var(--accent); font-weight: 800; display: block; margin-bottom: 5px;}
+        .price-sub { font-size: 14px; color: #555; text-transform: uppercase; letter-spacing: 1px; }
+
+        /* Contact Section */
+        #contact { background: rgba(0, 255, 204, 0.03); border-radius: 40px; margin: 0 5% 100px; }
+
+        .number-link {
+            display: block;
+            margin-top: 20px;
+            color: var(--accent);
+            text-decoration: none;
+            font-size: 1.2rem;
+            font-weight: bold;
+        }
+
+        footer { padding: 50px; border-top: 1px solid rgba(255,255,255,0.05); color: #555; font-size: 14px; }
+
+        @media(max-width:768px){
+            header h1 { font-size: 20px; }
+            nav { display: none; }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>ETHAN <span>STUDIO</span></h1>
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#services">Services</a>
+        <a href="#contact">Contact</a>
+    </nav>
+</header>
+
+<section class="hero" id="home">
+    <h2>High-Performance Websites for Bold Brands.</h2>
+    <p>We blend world-class design with conversion-focused strategy to help your business scale.</p>
+    <a href="https://wa.me/447737977729" class="btn" target="_blank">Start Your Project</a>
+</section>
+
+<section id="services">
+    <h3>The Solutions</h3>
+    <div class="cards">
+        <div class="card">
+            <h4>Starter</h4>
+            <p>Perfect for personal brands and landing pages that need a fast launch.</p>
+            <span class="price-sub">Starting at</span>
+            <div class="price">£99</div>
+        </div>
+        <div class="card">
+            <h4>Business</h4>
+            <p>A multi-page professional experience designed to build deep trust with clients.</p>
+            <span class="price-sub">Starting at</span>
+            <div class="price">£199</div>
+        </div>
+        <div class="card">
+            <h4>Enterprise</h4>
+            <p>Tailor-made solutions with advanced SEO and custom animations.</p>
+            <span class="price-sub">Starting at</span>
+            <div class="price">£399</div>
+        </div>
+    </div>
+</section>
+
+<section id="contact">
+    <h3>Ready to transform your digital presence?</h3>
+    <p style="color: var(--text-dim); margin-bottom: 40px; font-size: 20px;">Limited availability for 2026. Secure your spot today.</p>
+    <a href="https://wa.me/447737977729" class="btn" target="_blank">Chat with Ethan</a>
+    <a href="tel:+447737977729" class="number-link">+44 7737 977729</a>
+</section>
+
+<footer>
+    <p>© 2026 Ethan Web Design Studio. All rights reserved.</p>
+</footer>
+
+</body>
+</html>
+<section id="contact">
+    <h3>Ready to transform your digital presence?</h3>
+    <p style="color: var(--text-dim); margin-bottom: 40px; font-size: 20px;">Limited availability for 2026. Secure your spot today.</p>
+    
+    <!-- Main WhatsApp CTA -->
+    <a href="https://wa.me" class="btn" target="_blank">Chat with Ethan</a>
+    
+    <div style="margin-top: 30px;">
+        <!-- Phone Link -->
+        <a href="tel:+447737977729" class="number-link" style="margin-bottom: 10px;">+44 7737 977729</a>
+        
+        <!-- Email Link -->
+        <a href="mailto:ethanmathew842@gmail.com" class="number-link" style="font-weight: 400; font-size: 1rem; opacity: 0.8;">ethanmathew842@gmail.com</a>
+    </div>
+</section>
